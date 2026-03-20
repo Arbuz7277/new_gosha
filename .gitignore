@@ -1,0 +1,10 @@
+*.log
+/logs
+/database
+*.db
+*.json
+*.pyc
+*.env
+/.venv
+__pycache.py
+/.idea

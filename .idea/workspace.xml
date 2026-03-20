@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b4e404b-04ea-42bf-8341-5a3f3e889a58" name="Changes" comment="Added .gitignore&#10;&#10;API_key in .env invalid" />
+    <list default="true" id="2b4e404b-04ea-42bf-8341-5a3f3e889a58" name="Changes" comment=".env added in .gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +98,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774002509452</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=".env added in .gitignore">
+      <option name="closed" value="true" />
+      <created>1774002588319</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1774002588319</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,6 +124,7 @@
     <MESSAGE value="first commit!" />
     <MESSAGE value="Created first logic" />
     <MESSAGE value="Added .gitignore&#10;&#10;API_key in .env invalid" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added .gitignore&#10;&#10;API_key in .env invalid" />
+    <MESSAGE value=".env added in .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value=".env added in .gitignore" />
   </component>
 </project>

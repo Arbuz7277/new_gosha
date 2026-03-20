@@ -18,6 +18,13 @@ class Config:
         self.dp_path = Path('database')
         self.json_users_path = self.dp_path / 'users.json'
 
+
+        # Values
+        self.max_len_name = 16
+        self.min_len_name = 3
+        self.farm_cooldown_seconds = 60
+        self.char_money = '¢'
+
     @property
     def default_last_farm(self):
         return 0

@@ -2,7 +2,7 @@ import time
 import os
 import logging
 import telebot
-import models.bot
+from models.bot import Bot
 from config import Config
 
 def setup_logging():
@@ -27,7 +27,7 @@ def main():
     logger.info("Bot running...")
 
     config = Config()
-    bot = models.bot.Bot(config.token)
+    bot = Bot(config.token)
     bot.register_handlers()
     bot.run()
 

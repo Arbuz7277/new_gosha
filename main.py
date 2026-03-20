@@ -1,9 +1,31 @@
 import time
+import os
+import logging
 import telebot
 import models.bot
 from config import Config
 
+def setup_logging():
+    if not os.path.exists('logs'):
+        os.mkdir('logs')
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s : <%(name)s> : %(levelname)s - %(message)s',
+        handlers=[
+            logging.StreamHandler(),
+            logging.FileHandler('logs/bot.log', encoding='utf-8')
+        ]
+    )
+
+    logging.getLogger('urllib3').setLevel(logging.WARNING)
+    logging.getLogger('telebot').setLevel(logging.WARNING)
+
 def main():
+    setup_logging()
+
+    logger = logging.getLogger(__name__)
+    logger.info("Bot running...")
+
     config = Config()
     bot = models.bot.Bot(config.token)
     bot.register_handlers()

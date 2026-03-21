@@ -2,8 +2,8 @@ import time
 import os
 import logging
 import telebot
-from models.bot import Bot
-from config import Config
+from src.models.bot import Bot
+from src.config import Config
 
 def setup_logging():
     if not os.path.exists('logs'):

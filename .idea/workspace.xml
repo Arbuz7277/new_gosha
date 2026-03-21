@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b4e404b-04ea-42bf-8341-5a3f3e889a58" name="Changes" comment="Added command /bot">
-      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handlers/base/__init__.py" afterDir="false" />
+    <list default="true" id="2b4e404b-04ea-42bf-8341-5a3f3e889a58" name="Changes" comment="idk&#10;Error in handlers/base/start.py, Line 2: ImportError: attempted relative import beyond top-level package">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/base/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/base/bot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/base/start.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/bank.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/bot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/database.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,15 +57,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Дети\Ренат\все проекты\python\gosha" />
@@ -133,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774033296498</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="idk&#10;Error in handlers/base/start.py, Line 2: ImportError: attempted relative import beyond top-level package">
+      <option name="closed" value="true" />
+      <created>1774078103656</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1774078103656</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,6 +182,7 @@
     <MESSAGE value=".env added in .gitignore" />
     <MESSAGE value="Added more logic" />
     <MESSAGE value="Added command /bot" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added command /bot" />
+    <MESSAGE value="idk&#10;Error in handlers/base/start.py, Line 2: ImportError: attempted relative import beyond top-level package" />
+    <option name="LAST_COMMIT_MESSAGE" value="idk&#10;Error in handlers/base/start.py, Line 2: ImportError: attempted relative import beyond top-level package" />
   </component>
 </project>

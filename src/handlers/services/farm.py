@@ -48,4 +48,4 @@ def register(bot):
         text += f"Вы нафармили {cent_to_coin(random_money)} коинов.\n"
         text += f"Ваш баланс: {user.balance}"
 
-        msg.send_message(msg.chat.id, text, parse_mode='HTML')
+        bot.send_message(msg.chat.id, text, parse_mode='HTML')

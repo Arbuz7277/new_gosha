@@ -62,5 +62,4 @@ class Bank:
         user = dp.load_user(uid)
         user['balance'] -= money
         dp.save_user(user)
-
         logger.debug(f"Removed {money} cent to {uid}")

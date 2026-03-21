@@ -57,6 +57,6 @@ class Database:
     def save_bank(self, data):
         try:
             with open(cfg.json_bank_path, 'w') as f:
-                json.dunp(data, f, indent=2)
+                json.dump(data, f, indent=2)
         except Exception as e:
             raise Exception(f"Error in write to file {cfg.json_bank_path}: {type(e).__name__}: {e}")

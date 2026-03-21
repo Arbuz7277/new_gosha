@@ -16,7 +16,7 @@ class User:
         users = dp.load_users()
         uid = []
         for user in users.values():
-            if user['telegram_id'] == tg.id:
+            if isinstance(user, dict) and ['telegram_id'] == tg.id:
                 uid.append(user['id'])
 
 

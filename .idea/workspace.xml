@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b4e404b-04ea-42bf-8341-5a3f3e889a58" name="Changes" comment=".env added in .gitignore">
+    <list default="true" id="2b4e404b-04ea-42bf-8341-5a3f3e889a58" name="Changes" comment="Added command /bot">
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/handlers/base/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,18 +24,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Arbuz7277"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Arbuz7277&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Arbuz7277/new_gosha.git",
-    "accountId": "31a1b623-d991-486d-8792-9ecd01c46913"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Arbuz7277/new_gosha.git&quot;,
+    &quot;accountId&quot;: &quot;31a1b623-d991-486d-8792-9ecd01c46913&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -49,6 +51,7 @@
   "keyToString": {
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
@@ -106,12 +109,46 @@
       <option name="project" value="LOCAL" />
       <updated>1774002588319</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=".env added in .gitignore">
+      <option name="closed" value="true" />
+      <created>1774002735607</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1774002735607</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added more logic">
+      <option name="closed" value="true" />
+      <created>1774013852624</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1774013852624</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added command /bot">
+      <option name="closed" value="true" />
+      <created>1774033296498</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1774033296498</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="285aa276-8cb2-40f2-8872-476af25013e3" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
+        <entry key="285aa276-8cb2-40f2-8872-476af25013e3">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
@@ -125,6 +162,8 @@
     <MESSAGE value="Created first logic" />
     <MESSAGE value="Added .gitignore&#10;&#10;API_key in .env invalid" />
     <MESSAGE value=".env added in .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value=".env added in .gitignore" />
+    <MESSAGE value="Added more logic" />
+    <MESSAGE value="Added command /bot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added command /bot" />
   </component>
 </project>

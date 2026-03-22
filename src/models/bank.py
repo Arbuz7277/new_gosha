@@ -38,12 +38,13 @@ class Bank:
         check['type'] = type
         check['description'] = description
 
-        self.add_money(recipient, check['received'])
         self.remove_money(sender, amount)
+        self.add_money(recipient, check['received'])
 
         dp.save_bank(self.data)
 
         logger.info(f"Created check #{check['id']} of type {check['type']}")
+        return check
 
     def add_money(self, uid, money):
         if money < 0:
@@ -60,6 +61,9 @@ class Bank:
             raise ValueError("argument 'money' cannot be negative.")
 
         user = dp.load_user(uid)
+        if user['balance'] < money:
+            raise ValueError("the user does not have sufficient funds")
+
         user['balance'] -= money
         dp.save_user(user)
         logger.debug(f"Removed {money} cent to {uid}")

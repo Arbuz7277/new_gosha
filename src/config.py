@@ -1,4 +1,5 @@
 import os
+import time
 import json
 from dotenv import load_dotenv
 from pathlib import Path
@@ -37,7 +38,7 @@ class Config:
         self.min_len_description_user = 1
         self.max_len_description_user = 255
         self.farm_cooldown_seconds = 60
-        self.char_money = '¢'
+        self.char_money = 'coins'
         self.len_check_key = 48
         self.chars_check_key = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890!$^&*-"
         self.random_range_farm = (100, 1000)
@@ -50,4 +51,4 @@ class Config:
 
     @property
     def default_last_farm(self):
-        return 0
+        return time.time()

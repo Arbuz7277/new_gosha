@@ -1,4 +1,4 @@
 import time
 
 def cent_to_coin(cent):
-    return round(cent // 100, 2)
+    return str(round(cent / 100, 2)).replace('.', ',')

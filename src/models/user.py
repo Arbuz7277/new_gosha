@@ -16,7 +16,7 @@ class User:
         users = dp.load_users()
         uid = []
         for user in users.values():
-            if isinstance(user, dict) and ['telegram_id'] == tg.id:
+            if isinstance(user, dict) and user.get('telegram_id') == tg.id:
                 uid.append(user['id'])
 
 
@@ -68,7 +68,7 @@ class User:
     # === Balance ===
     @property
     def balance(self):
-        return round(self.data['balance'] / 100, 2)
+        return str(round(self.data['balance'] / 100, 2)).replace('.', ',')
 
     # === Description ===
     @property

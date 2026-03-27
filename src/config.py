@@ -24,7 +24,7 @@ class Config:
         self.json_users_path = self.dp_path / 'users.json'
         if not os.path.exists(self.json_users_path):
             with open(self.json_users_path, 'w') as f:
-                json.dump({}, f)
+                json.dump({"0": {"balance": 0, "name": "Bot", "id": 0}}, f)
 
         self.json_bank_path = self.dp_path / 'bank.json'
         if not os.path.exists(self.json_bank_path):

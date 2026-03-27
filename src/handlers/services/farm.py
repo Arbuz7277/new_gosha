@@ -12,8 +12,6 @@ logger = logging.getLogger(__name__)
 bank = Bank()
 cfg = Config()
 
-# reduce_to_five
-
 def register(bot):
     @bot.message_handler(commands=['farm', 'фарм'])
     def farm(msg):
@@ -37,7 +35,6 @@ def register(bot):
 
             logger.warning(f"The {msg.from_user.id}'s coldown has not passed.")
             bot.send_message(msg.chat.id, text, parse_mode='HTML')
-            logger.debug(f"Send message to {msg.chat.id}")
             return
 
         random_money = random.randint(cfg.random_range_farm[0], cfg.random_range_farm[1])
@@ -49,11 +46,10 @@ def register(bot):
             type=cfg.FARM
         )
         user.set_last_farm()
-        user.update()
 
         text = f"✅ <b>Успешно!</b>\n\n"
         text += f"<a href='tg://user?id={msg.from_user.id}'>Вы</a> нафармили {cent_to_coin(check['received'])} {cfg.char_money}.\n"
-        text += f"Ваш баланс: {user.balance} {cfg.char_money}"
+        text += (f"Ваш баланс: {user.balance} {cfg.char_money}\n\n"
+                 f"📄 Чек №{check['id']}")
 
         bot.send_message(msg.chat.id, text, parse_mode='HTML')
-        logger.debug(f"Send message to {msg.chat.id}")

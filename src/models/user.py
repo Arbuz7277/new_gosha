@@ -1,9 +1,11 @@
 import time
+import logging
 from datetime import datetime, timezone
 
 from .database import Database
 from .. import config
 
+logger = logging.getLogger(__name__)
 cfg = config.Config()
 dp = Database()
 
@@ -23,6 +25,7 @@ class User:
         if not uid:
             self.data = users.setdefault(str(dp.max_user_id + 1), {})
             self.data.setdefault('id', dp.max_user_id + 1)
+            logger.info(f'{tg.id} register')
         else:
             self.data = users[str(uid[0])]
             self.data.setdefault('id', uid[0])
@@ -68,7 +71,9 @@ class User:
     # === Balance ===
     @property
     def balance(self):
-        return str(round(self.data['balance'] / 100, 2)).replace('.', ',')
+        data = self.load()
+        balance = data['balance']
+        return str(round(balance / 100, 2)).replace('.', ',')
 
     # === Description ===
     @property
@@ -77,7 +82,7 @@ class User:
     @description.setter
     def set_description(self, new_description):
         if not isinstance(new_description, str):
-            raise TypeError(f"argument 'money' must be str, got {type(name).__name__}")
+            raise TypeError(f"argument 'money' must be str, got {type(new_description).__name__}")
 
         last_description = self.date['description']
         self.date['description'] = new_description
@@ -126,6 +131,10 @@ class User:
         if self.data_update:
             self.data_update = False
             dp.save_user(self.data)
+
+    def load(self):
+        users = dp.load_users()
+        return users[str(self.data['id'])]
 
     def update(self):
         self.__init__(self.__tg)

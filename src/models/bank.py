@@ -46,7 +46,19 @@ class Bank:
         logger.info(f"Created check #{check['id']} of type {check['type']}")
         return check
 
+    def get_check(self, check_id, user_id=None, key=None):
+        data = dp.load_bank()
+        check = data[str(check_id)]
+        check_users = [check['sender'], check['recipient']]
+        check_key = check['key']
+        if not ((check_key == key) or (user_id in check_users)):
+            return False
+
+        return check
+
     def add_money(self, uid, money):
+        if not isinstance(money, int):
+            raise TypeError(f"argument 'money' must be int, got {type(money).__name__}")
         if money < 0:
             raise ValueError("argument 'money' cannot be negative.")
 
@@ -57,6 +69,8 @@ class Bank:
         logger.debug(f"Added {money} cent to {uid}")
 
     def remove_money(self, uid, money):
+        if not isinstance(money, int):
+            raise TypeError(f"argument 'money' must be int, got {type(money).__name__}")
         if money < 0:
             raise ValueError("argument 'money' cannot be negative.")
 

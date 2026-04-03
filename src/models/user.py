@@ -115,6 +115,7 @@ class User:
 
 
     def set_last_farm(self):
+        self.data = self.load()
         self.data['last_farm'] = time.time()
         self.data_update = True
         self.save()

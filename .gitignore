@@ -1,0 +1,24 @@
+# Виртуалное окружение
+venv/
+.venv/
+env/
+.env/
+
+# Кэш
+__pycache__/
+*.py[cod]
+*.so
+
+# Логи и БД
+*.log
+*.sqlite
+*.db
+
+# Файлы IDE
+.idea/
+.vscode/
+*iml
+
+# Секреты
+.env
+.env.local

@@ -1,6 +1,6 @@
 import logging
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Optional
 from database.db_manager import db
 
@@ -13,6 +13,8 @@ class UserData:
     telegram_id: int
     name: str
     balance: int
+    last_farm: datetime
+    last_seen: datetime
     created_at: datetime
 
 class User:
@@ -22,5 +24,6 @@ class User:
 
     async def update(self):
         row_data = await db.get_user(self.from_user)
+        row_data['last_seen'] = datetime.now(timezone.utc)
         self.data = UserData(**row_data)
         return True

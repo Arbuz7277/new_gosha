@@ -25,6 +25,8 @@ class DatabaseManager:
                 "telegram_id INTEGER NOT NULL CHECK (telegram_id BETWEEN 1000000000 AND 9999999999),"
                 "name TEXT NOT NULL DEFAULT 'User',"
                 "balance INTEGER NOT NULL DEFAULT 0,"
+                "last_farm TIMESTAMP DEFAULT CURRENT_TIMESTAMP,"
+                "last_seen TIMESTAMP DEFAULT CURRENT_TIMESTAMP,"
                 "created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP"
                 ")") as cursor:
                     await conn.commit()

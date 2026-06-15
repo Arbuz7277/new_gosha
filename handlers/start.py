@@ -10,5 +10,5 @@ router = Router()
 async def start(msg: types.Message):
     user = User(msg.from_user)
     await user.update()
-    await msg.answer(f"Салам, {user.data.name}!\n\nВаш баланс: {user.data.balance}\nВаш айди: {user.data.id}")
+    await msg.answer(f"Салам, {user.data.name}!\n\nВаш баланс: {user.data.balance / 100}\nВаш айди: {user.data.id}")
 
